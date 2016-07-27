@@ -75,5 +75,23 @@ global $language;
  */
 ?>
 <header>
-	<h1>COUCOU</h1>
-</header>
+	<h1>Jimmy Havenith</h1>
+	<?php if ($main_menu): ?>
+		<div id="main-menu" class="navigation">
+			<?php print theme('links__system_main_menu', array(
+				'links' => $main_menu,
+				'attributes' => array(
+					'id' => 'main-menu-links',
+					'class' => array('links', 'clearfix'),
+				),
+				'heading' => array(
+					'text' => t('Main menu'),
+					'level' => 'h2',
+					'class' => array('element-invisible'),
+				),
+			)); ?>
+		</div> <!-- /#main-menu -->
+	<?php endif; ?>
+<div>
+		<?php echo render($page['content']); ?>
+</div>
