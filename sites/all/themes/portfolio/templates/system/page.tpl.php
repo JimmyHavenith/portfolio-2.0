@@ -75,9 +75,15 @@ global $language;
  */
 ?>
 <header>
-	<h1>Jimmy Havenith</h1>
+	<div class="header-logo">
+		<h1>Jimmy Havenith
+			<a href="#">
+				<img src="" alt="logo de Jimmy Havenith" />
+			</a>
+		</h1>
+	</div>
 	<?php if ($main_menu): ?>
-		<div id="main-menu" class="navigation">
+		<div class="header-menu">
 			<?php print theme('links__system_main_menu', array(
 				'links' => $main_menu,
 				'attributes' => array(
@@ -90,8 +96,34 @@ global $language;
 					'class' => array('element-invisible'),
 				),
 			)); ?>
-		</div> <!-- /#main-menu -->
+		</div>
 	<?php endif; ?>
-<div>
-		<?php echo render($page['content']); ?>
-</div>
+</header>
+<section>
+	<div class="container">
+		<div>
+				<?php echo render($page['header']); ?>
+		</div>
+		<div>
+				<?php echo render($page['highlighted']); ?>
+		</div>
+		<div>
+				<?php echo render($page['content']); ?>
+		</div>
+	</div>
+</section>
+<footer>
+	<div class="social">
+		<ul>
+			<li><img src="" alt="social-facebook" /></li>
+			<li><img src="" alt="social-twitter" /></li>
+			<li><img src="" alt="social-github" /></li>
+			<li><img src="" alt="social-Linkedin" /></li>
+		</ul>
+	</div>
+	<div class="right">
+		<p>
+			Tous droits réservés, créé et développé par Jimmy Havenith, intégration via Drupal
+		</p>
+	</div>
+</footer>
