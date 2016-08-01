@@ -75,31 +75,67 @@ global $language;
  */
 ?>
 <header>
-	<div class="header-logo">
-		<h1>Jimmy Havenith
-			<a href="#">
-				<img src="" alt="logo de Jimmy Havenith" />
-			</a>
-		</h1>
-	</div>
-	<?php if ($main_menu): ?>
-		<div class="header-menu">
-			<?php print theme('links__system_main_menu', array(
-				'links' => $main_menu,
-				'attributes' => array(
-					'id' => 'main-menu-links',
-					'class' => array('links', 'clearfix'),
-				),
-				'heading' => array(
-					'text' => t('Main menu'),
-					'level' => 'h2',
-					'class' => array('element-invisible'),
-				),
-			)); ?>
+	<div class="container">
+		<div class="header">
+			<div class="header-logo">
+				<h1>Jimmy Havenith</h1>
+				<a href="#">
+					<img src="<?php global $base_url; echo $base_url; ?>/sites/all/themes/portfolio/img/logo.png" alt="Logo de Jimmy Havenith" />
+				</a>
+			</div>
+			<?php if ($main_menu): ?>
+				<div class="header-menu">
+					<?php print theme('links__system_main_menu', array(
+						'links' => $main_menu,
+						'attributes' => array(
+							'id' => 'main-menu-links',
+							'class' => array('links', 'clearfix'),
+						),
+						'heading' => array(
+							'text' => t('Main menu'),
+							'level' => 'h2',
+							'class' => array('element-invisible'),
+						),
+					)); ?>
+				</div>
+			<?php endif; ?>
+			<?php if(drupal_is_front_page()): ?>
+				<div class="header-button">
+					<a class="header-button-filter" href="#">filter</a>
+					<!-- <a class="header-button-menu" href="#">menu</a> -->
+				</div>
+			<?php endif; ?>
 		</div>
-	<?php endif; ?>
+	</div>
 </header>
-<section>
+<?php if(drupal_is_front_page()): ?>
+<section class="isotope-filter">
+	<div class="container">
+		<div class="projets-isotope item-list">
+			<ul class="isotope-options clearfix" data-filter-group="Categorie">
+				<li class="first">
+					<a class="filterbutton selected" data-filter="" href="#filter">Tout</a>
+				</li>
+				<li>
+					<a class="filterbutton" data-filter=".web" href="#filter"> </a>
+					<div class="views-field views-field-field-project-tags">
+					<a class="filterbutton" data-filter=".web" href="#filter">Web</a>
+					<div class="field-content">
+					</div>
+				</li>
+				<li>
+					<a class="filterbutton" data-filter=".print" href="#filter"> </a>
+					<div class="views-field views-field-field-project-tags">
+					<a class="filterbutton" data-filter=".print" href="#filter">Print</a>
+					<div class="field-content">
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>
+<?php endif; ?>
+<section class="content filter-not-display">
 	<div class="container">
 		<div>
 				<?php echo render($page['header']); ?>
@@ -107,23 +143,28 @@ global $language;
 		<div>
 				<?php echo render($page['highlighted']); ?>
 		</div>
-		<div>
+		<div class="portfolio-container">
 				<?php echo render($page['content']); ?>
 		</div>
 	</div>
 </section>
 <footer>
-	<div class="social">
-		<ul>
-			<li><img src="" alt="social-facebook" /></li>
-			<li><img src="" alt="social-twitter" /></li>
-			<li><img src="" alt="social-github" /></li>
-			<li><img src="" alt="social-Linkedin" /></li>
-		</ul>
-	</div>
-	<div class="right">
-		<p>
-			Tous droits réservés, créé et développé par Jimmy Havenith, intégration via Drupal
-		</p>
+	<div class="container">
+		<div class="social">
+			<ul>
+				<li class="facebook"><a href="https://www.facebook.com/jim.have.127" title="La page facebook de Jimmy Havenith">La page facebook de Jimmy Havenith</a></li>
+        <li class="twitter"><a href="https://twitter.com/JimmyHavenith" title="La page twitter de Jimmy Havenith">La page twitter de Jimmy Havenith</a></li>
+        <li class="github"><a href="https://github.com/JimmyHavenith" title="La page github de Jimmy Havenith">La page github de Jimmy Havenith</a></li>
+				<li class="linkedin"><a href="https://www.linkedin.com/profile/view?id=AAIAABr7Wx4BuBmr8nmX78TCQeUM63F10ggedFk&trk=nav_responsive_tab_profile_pic" title="La page linkedin de Jimmy Havenith">La page linkedin de Jimmy Havenith</a></li>
+			</ul>
+		</div>
+		<div class="right">
+			<p>
+				Tous droits réservés, créé et développé par <span>Jimmy Havenith</span>
+			</p>
+			<p>
+				Intégration via <a href="#">Drupal</a>
+			</p>
+		</div>
 	</div>
 </footer>

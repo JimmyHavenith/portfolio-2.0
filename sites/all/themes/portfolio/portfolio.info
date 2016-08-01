@@ -23,3 +23,6 @@ regions[page_bottom]    = 'Page bottom'
 ;;;;;;;;;;;;;;;;;;;;;
 
 stylesheets[all][] = css/style.css
+
+scripts[] = 'js/script.js'
+scripts[] = 'js/isotope.pkgd.min.js'

@@ -1,0 +1,309 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body{
+  background-color: #fbfbfb;
+  color: #4c4c4c;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 27px;
+  position: relative;
+}
+
+header, footer{
+  width: 100%;
+	height: 180px;
+}
+section{
+  width: 100%;
+}
+section::after{
+	clear: both;
+	display: block;
+	content: "";
+}
+.container{
+	width: 80%;
+	display: block;
+	margin: auto;
+}
+
+
+
+/*HEADER*/
+.header-logo{
+	padding-top: 25px;
+	width: 70%;
+}
+.header-menu{
+	width: 20%;
+}
+.header-menu li{
+	float: left;
+	margin-left: 25px;
+}
+.header-menu li a{
+	font-family: "Montserrat", sans-serif;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #1d1d1d;
+}
+.header-menu li a:hover{
+	color: #a0a0a0;
+	border-bottom: 2px solid #a0a0a0;
+}
+.header-menu li .active{
+	color: #fb923a;
+	border-bottom: 2px solid #fb923a;
+}
+.header-menu li .active:hover{
+	color: #fb923a;
+	border-bottom: 2px solid #fb923a;
+}
+.header-button{
+	width: 9%;
+	margin-bottom: 18px;
+}
+.header-button a{
+	float: right !important;
+}
+.header-button .header-button-filter{
+	float: left;
+	display: block;
+	width: 30px;
+	height: 30px;
+	background-image: url('../img/filter.png');
+	background-position: 0 0;
+	text-indent: -5000px;
+}
+.header-button .header-button-menu{
+	display: block;
+	width: 30px;
+	height: 30px;
+	background-image: url('../img/menu.png');
+	background-position: 0 0;
+	text-indent: -5000px;
+}
+header h1{
+	visibility: hidden;
+}
+.header-logo img{
+	width: 100px;
+}
+.header-logo, .header-button, .header-menu{
+	display: inline-block;
+}
+
+
+
+/*CONTENU HOMEPAGE ISOTOPE*/
+
+.content, .filter-not-display{
+	margin-top: -100px;
+	transition: 0.3s;
+}
+.filter-display{
+	margin-top: 0px;
+	transition: 0.3s;
+}
+.isotope-filter {
+    height: 100px;
+    padding-top: 34px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: -10px;
+}
+.isotope-filter .container{
+	border-top: 1px solid #eaeaea;
+	padding-top: 15px;
+}
+.isotope-filter li {
+    display: inline-block;
+    font-size: 13px;
+    line-height: 13px;
+    list-style: outside none none;
+    text-transform: uppercase;
+}
+.item-list ul li {
+    margin: 0 0 0.25em 1.5em;
+    padding: 0;
+		margin: 25px;
+}
+.isotope-filter li a {
+    color: #1d1d1d;
+		font-family: "Montserrat", sans-serif;
+		font-size:  15px;
+		text-decoration: none;
+}
+.isotope-filter li a:hover{
+	color: #a0a0a0;
+}
+.isotope-filter .selected{
+	color: #fb923a;
+	transition: 0.2s;
+}
+.isotope-element .views-field-field-project-title, .isotope-element .views-field-field-project-tags{
+	display: none;
+}
+.portfolio-container{
+	width: 100%;
+	height: auto;
+	margin: 0;
+	padding: 0;
+}
+.portfolio-container .isotope-element{
+	width: 33.33%;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	float: left;
+	margin-bottom: -8px;
+}
+.portfolio-container .views-field{
+	margin: 0;
+	padding: 0;
+}
+.views-field-field-project-highlight img{
+	width: 100%;
+	height: auto;
+}
+
+
+
+/*FOOTER*/
+
+footer{
+	background-color: #ededed;
+	padding-bottom: 30px;
+	padding-top: 50px;
+	margin-top: 75px;
+}
+footer p{
+	text-align: center;
+	font-family: "Helvetica Neue", sans-serif;
+	color: #7d7d7d;
+	font-weight: lighter;
+	font-size: 14px;
+}
+footer p span{
+	color: #4c4c4c;
+}
+footer a{
+	color: #fb923a;
+}
+footer a:hover{
+	text-decoration: none;
+}
+footer .social{
+	display: block;
+	width: 100%;
+	padding-bottom: 30px;
+}
+footer .social::after{
+	clear: both;
+	display: block;
+	content: "";
+}
+footer .social ul{
+	text-align: center;
+}
+footer .social li{
+	display: inline-block;
+	text-align: center;
+	margin: 20px;
+}
+footer .facebook a{
+	display: block;
+	width: 25px;
+	height: 25px;
+	background-image: url('../img/social-icon.png');
+	background-position: 0 0;
+	text-indent: -5000px;
+	transition: 0.2s all;
+}
+footer .twitter a{
+	display: block;
+	width: 25px;
+	height: 25px;
+	background-image: url('../img/social-icon.png');
+	background-position: -25px 0;
+	text-indent: -5000px;
+	transition: 0.2s all;
+}
+footer .github a{
+	display: block;
+	width: 25px;
+	height: 25px;
+	background-image: url('../img/social-icon.png');
+	background-position: -50px 0;
+	text-indent: -5000px;
+	transition: 0.2s all;
+}
+footer .linkedin a{
+	display: block;
+	width: 25px;
+	height: 25px;
+	background-image: url('../img/social-icon.png');
+	background-position: -75px 0;
+	text-indent: -5000px;
+	transition: 0.2s all;
+}
+footer .facebook a:hover{
+	background-position: 0 25px;
+}
+footer .twitter a:hover{
+	background-position: -25px 25px;
+}
+footer .github a:hover{
+	background-position: -50px 25px;
+}
+footer .linkedin a:hover{
+	background-position: -75px 25px;
+}
