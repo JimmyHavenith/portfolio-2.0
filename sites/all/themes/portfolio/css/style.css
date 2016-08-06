@@ -189,7 +189,7 @@ header h1{
 	color: #fb923a;
 	transition: 0.2s;
 }
-.isotope-element .views-field-field-project-title, .isotope-element .views-field-field-project-tags{
+.isotope-element .views-field-field-project-title, .isotope-element .views-field-view-node{
 	display: none;
 }
 .portfolio-container{
@@ -199,23 +199,75 @@ header h1{
 	padding: 0;
 }
 .portfolio-container .isotope-element{
+	display: block;
 	width: 33.33%;
 	height: auto;
 	margin: 0;
 	padding: 0;
 	float: left;
-	margin-bottom: -8px;
+	margin-bottom: -7px;
+	position: relative;
+	overflow: hidden;
+	overflow-y: hidden;
+	background-color: white;
+}
+.isotope-element .views-field-field-project-tags{
+	background-color: white;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: -100%;
+	width: 100%;
+	transition: 0.3s;
+	z-index: 500;
+}
+.isotope-element .views-field-field-project-highlight img{
+	width: 100%;
+	position: relative;
+	height: auto;
+	top: 0;
+	transition: 0.3s;
+}
+.portfolio-container .isotope-element:hover .views-field-field-project-tags {
+    top: -5%;
+}
+.portfolio-container .isotope-element:hover .views-field-field-project-highlight img {
+    top: 100%;
 }
 .portfolio-container .views-field{
 	margin: 0;
 	padding: 0;
 }
-.views-field-field-project-highlight img{
+.project-link a{
 	width: 100%;
-	height: auto;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	text-indent: -5000px;
 }
-
-
+.project-info{
+	text-align: center;
+}
+.project-info h2{
+	text-transform: uppercase;
+	font-weight: bold;
+	color: black;
+}
+.project-info span{
+	color: #a0a0a0;
+	text-transform: uppercase;
+	font-family: "montserrat", sans-serif;
+	font-size: 13px;
+}
+.project-info-border{
+	background-color: #fb923a;
+  display: block;
+  height: 2px;
+  margin: 20px auto auto;
+  width: 35px;
+}
 
 /*FOOTER*/
 
