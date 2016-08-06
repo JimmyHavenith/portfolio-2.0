@@ -48,7 +48,7 @@ table {
 }
 
 body{
-  background-color: #fbfbfb;
+  background-color: #ededed;
   color: #4c4c4c;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 17px;
@@ -145,7 +145,7 @@ header h1{
 
 /*CONTENU HOMEPAGE ISOTOPE*/
 
-.content, .filter-not-display{
+.filter-not-display{
 	margin-top: -100px;
 	transition: 0.3s;
 }
@@ -269,10 +269,136 @@ header h1{
   width: 35px;
 }
 
+
+/*CONTACT*/
+.block.block-colorized-gmap.contextual-links-region {
+    margin-top: 35px;
+}
+.colorized-gmap-common {
+    width: 100%;
+		height: 350px;
+}
+#block-block-1{
+	border-top: 1px solid #dddddd;
+	border-bottom: 1px solid #dddddd;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+#block-block-1::after{
+	display: block;
+	clear: both;
+	content: "";
+}
+#block-block-1 ul{
+	margin-top: 50px;
+	display: block;
+	text-align: center;
+}
+#block-block-1 li{
+	float: left;
+	width: 33.33%;
+}
+#block-block-1 span{
+	background-position: center bottom;
+  background-repeat: no-repeat;
+  display: block;
+  font-weight: bold;
+  margin-bottom: 25px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+#block-block-1 .contact-num span{
+	background-image: url('../img/phone.png');
+}
+#block-block-1 .contact-email span{
+	background-image: url('../img/email.png');
+}
+#block-block-1 .contact-add span{
+	background-image: url('../img/address.png');
+}
+#block-block-1 > h2, .webform h2 {
+  font-family: "montserrat";
+  font-size: 25px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.webform h2{
+	margin-bottom: 50px;
+}
+.formulaire, .formulaire-intro{
+	display: inline-block;;
+	width: 49%;
+	vertical-align: middle;
+}
+.formulaire-intro-txt{
+	vertical-align: middle;
+	height: auto;
+	display: block;
+	margin: auto;
+	width: 50%;
+}
+.form-intro {
+    color: #fb923a;
+    margin-bottom: 15px;
+		font-size: 16px !important;
+}
+.formulaire-intro p {
+    font-family: "montserrat",sans-serif;
+    font-size: 14px;
+    text-align: center;
+    width: 100%;
+}
+.webform-component--nom, .webform-component--prenom {
+    display: inline-block;
+    width: 49%;
+}
+.webform-component--Email{
+	width: 100%;
+}
+.webform-component--message{
+	width: 90%;
+}
+.webform-component--nom .form-text, .webform-component--prenom .form-text{
+	width: 80%;
+	padding: 6px;
+}
+.webform-component--Email .form-text{
+	width: 89%;
+	padding: 6px;
+}
+.form-textarea-wrapper.resizable.textarea-processed.resizable-textarea{
+	margin-right: -6px;
+}
+.form-item.webform-component.webform-component-email.webform-component--Email {
+    margin-top: -5px;
+}
+.formulaire input, .formulaire textarea{
+	border: 1px solid #e9e9e9;
+}
+.formulaire label{
+	color: #4c4c4c;
+	font-family: "Montserrat", sans-serif;
+	font-size: 14px;
+}
+.webform-submit.button-primary.form-submit {
+    background-color: #fb923a;
+    padding: 8px 15px;
+		color: white;
+		cursor: pointer;
+		border: none;
+		text-transform: uppercase;
+		font-family: "Montserrat", sans-serif;
+		transition: 0.3s;
+}
+.webform-submit.button-primary.form-submit:hover {
+    background-color: #fb926b;
+}
 /*FOOTER*/
 
 footer{
-	background-color: #ededed;
+	background-color: #202020;
 	padding-bottom: 30px;
 	padding-top: 50px;
 	margin-top: 75px;

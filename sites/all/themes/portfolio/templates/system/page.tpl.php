@@ -135,7 +135,7 @@ global $language;
 	</div>
 </section>
 <?php endif; ?>
-<section class="content filter-not-display">
+<section class="content <?php if(drupal_is_front_page()): ?>filter-not-display<?php endif; ?>">
 	<div class="container">
 		<div>
 				<?php echo render($page['header']); ?>
