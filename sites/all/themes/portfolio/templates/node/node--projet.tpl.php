@@ -1,19 +1,16 @@
 <?php $n = node_load($node->nid); ?>
 <div class="page-project">
-  <div class="project-banner">
-    <img class="project-banner-img" src="<?php echo file_create_url($content['field_project_banner']['#items'][0]['uri']); ?>" alt="Site internet à Liège" />
-  </div>
   <div class="project-infos">
     <div class="project-techno">
-      <h2>Technologies utilisées</h2>
+      <h2><img src="<?php global $base_url; echo $base_url; ?>/sites/all/themes/portfolio/img/computer.png" alt="Logo de Jimmy Havenith" />Technologies utilisées</h2>
       <span><?php echo strip_tags(render($content['field_project_techno'])); ?></span>
     </div>
     <div class="project-client">
-      <h2>Client</h2>
+      <h2><img src="<?php global $base_url; echo $base_url; ?>/sites/all/themes/portfolio/img/client.png" alt="Logo de Jimmy Havenith" />Client</h2>
       <span><?php echo strip_tags(render($content['field_project_client'])); ?></span>
     </div>
     <div class="project-date">
-      <h2>Date du projet</h2>
+      <h2><img src="<?php global $base_url; echo $base_url; ?>/sites/all/themes/portfolio/img/date.png" alt="Logo de Jimmy Havenith" />Date du projet</h2>
       <span><?php echo strip_tags(render($content['field_project_date'])); ?></span>
     </div>
   </div>

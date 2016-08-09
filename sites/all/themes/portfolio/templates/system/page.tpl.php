@@ -99,12 +99,12 @@ global $language;
 					)); ?>
 				</div>
 			<?php endif; ?>
-			<?php if(drupal_is_front_page()): ?>
+			<!-- <?php if(drupal_is_front_page()): ?>
 				<div class="header-button">
 					<a class="header-button-filter" href="#">filter</a>
-					<!-- <a class="header-button-menu" href="#">menu</a> -->
+					<a class="header-button-menu" href="#">menu</a>
 				</div>
-			<?php endif; ?>
+			<?php endif; ?> -->
 		</div>
 	</div>
 </header>
@@ -160,7 +160,7 @@ global $language;
 		</div>
 		<div class="right">
 			<p>
-				Tous droits réservés, créé et développé par <span>Jimmy Havenith</span>
+				Tous droits réservés, créé et développé par Jimmy Havenith
 			</p>
 			<p>
 				Intégration via <a href="#">Drupal</a>
