@@ -2,20 +2,22 @@
 <div class="page-project">
   <div class="project-infos">
     <div class="project-techno">
-      <h2><img src="<?php global $base_url; echo $base_url; ?>/sites/all/themes/portfolio/img/computer.png" alt="Logo de Jimmy Havenith" />Technologies utilisées</h2>
+      <h2><img src="<?php global $base_url; echo $base_url; ?>/sites/all/themes/portfolio/img/computer.png" alt="icône pour les technologies utilisées pour le projet" />Technologies</h2>
       <span><?php echo strip_tags(render($content['field_project_techno'])); ?></span>
     </div>
     <div class="project-client">
-      <h2><img src="<?php global $base_url; echo $base_url; ?>/sites/all/themes/portfolio/img/client.png" alt="Logo de Jimmy Havenith" />Client</h2>
+      <h2><img src="<?php global $base_url; echo $base_url; ?>/sites/all/themes/portfolio/img/client.png" alt="icône pour le client" />Client</h2>
       <span><?php echo strip_tags(render($content['field_project_client'])); ?></span>
     </div>
     <div class="project-date">
-      <h2><img src="<?php global $base_url; echo $base_url; ?>/sites/all/themes/portfolio/img/date.png" alt="Logo de Jimmy Havenith" />Date du projet</h2>
+      <h2><img src="<?php global $base_url; echo $base_url; ?>/sites/all/themes/portfolio/img/date.png" alt="icône pour la date de réalisation du projet" />Date du projet</h2>
       <span><?php echo strip_tags(render($content['field_project_date'])); ?></span>
     </div>
   </div>
   <div class="project-images">
-    <img src="<?php echo file_create_url($content['field_project_images']['#items'][0]['uri']); ?>" alt="Site internet à Liège" />
+    <?php foreach($content['field_project_images']['#items'] as $image) :?>
+       <img src="<?php echo file_create_url($image['uri']); ?>" alt="Projet réalisé par Jimmy Havenith intitulé '<?php echo strip_tags(render($content['field_project_title'])); ?>'" />
+    <?php endforeach; ?>
   </div>
   <div class="project-description">
     <div class="project-desc-div">
@@ -27,7 +29,7 @@
     <div class="project-link-extern">
       <?php $link = field_get_items('node', $node, 'field_project_link'); ?>
       <?php if($link): ?>
-        <a href="<?php echo strip_tags(render($content['field_project_link'])); ?>">Voir le projet</a>
+        <a title="Lien externe vers le projet '<?php echo strip_tags(render($content['field_project_title'])); ?>'" href="<?php echo strip_tags(render($content['field_project_link'])); ?>">Voir le projet</a>
       <?php endif; ?>
     </div>
   </div>

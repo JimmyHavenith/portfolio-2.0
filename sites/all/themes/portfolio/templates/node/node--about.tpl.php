@@ -1,12 +1,12 @@
 <?php $n = node_load($node->nid); ?>
 <div class="page-about">
   <div class="about-image">
-    <img src="<?php echo file_create_url($content['field_photo']['#items'][0]['uri']); ?>" alt="" />
+    <img src="<?php echo file_create_url($content['field_photo']['#items'][0]['uri']); ?>" alt="Photo de Jimmy Havenith" />
   </div>
   <div class="about-desc">
     <div class="about-desc-div">
       <h2><?php echo strip_tags(render($content['field_name'])); ?></h2>
-      <div class="about-body">
+      <div class="about-body" itemprop="about">
         <p>
           <?php echo strip_tags(render($content['body'])); ?>
         </p>

@@ -84,6 +84,7 @@ header{
 }
 .header{
 	padding-top: 15px;
+	z-index: 500;
 }
 .header-logo{
 	width: 29%;
@@ -120,13 +121,12 @@ header{
 	border-bottom: 2px solid #fb923a;
 }
 .header-button{
-	width: 9%;
-	margin-bottom: 18px;
+	display: none;
 }
 .header-button a{
 	float: right !important;
 }
-.header-button .header-button-filter{
+.header-button-filter{
 	float: left;
 	display: block;
 	width: 30px;
@@ -136,7 +136,6 @@ header{
 	text-indent: -5000px;
 }
 .header-button .header-button-menu{
-	display: block;
 	width: 30px;
 	height: 30px;
 	background-image: url('../img/menu.png');
@@ -150,14 +149,14 @@ header h1{
 .header-logo img{
 	width: 50px;
 }
-.header-logo, .header-button, .header-menu{
+.header-logo, .header-menu{
 	display: inline-block;
 }
 
 
 
 /*CONTENU HOMEPAGE ISOTOPE*/
-
+/*
 .filter-not-display{
 	margin-top: -100px;
 	transition: 0.3s;
@@ -178,22 +177,22 @@ header h1{
 	padding-top: 15px;
 }
 .isotope-filter li {
-    display: inline-block;
-    font-size: 13px;
-    line-height: 13px;
-    list-style: outside none none;
-    text-transform: uppercase;
+  display: inline-block;
+  font-size: 13px;
+  line-height: 13px;
+  list-style: outside none none;
+  text-transform: uppercase;
 }
 .item-list ul li {
-    margin: 0 0 0.25em 1.5em;
-    padding: 0;
-		margin: 25px;
+  margin: 0 0 0.25em 1.5em;
+  padding: 0;
+	margin: 25px;
 }
 .isotope-filter li a {
-    color: #1d1d1d;
-		font-family: "Montserrat", sans-serif;
-		font-size:  15px;
-		text-decoration: none;
+  color: #1d1d1d;
+	font-family: "Montserrat", sans-serif;
+	font-size:  15px;
+	text-decoration: none;
 }
 .isotope-filter li a:hover{
 	color: #a0a0a0;
@@ -232,7 +231,7 @@ header h1{
 	top: -100%;
 	width: 100%;
 	transition: 0.3s;
-	z-index: 500;
+	z-index: 400;
 }
 .isotope-element .views-field-field-project-highlight img{
 	width: 100%;
@@ -242,7 +241,7 @@ header h1{
 	transition: 0.3s;
 }
 .portfolio-container .isotope-element:hover .views-field-field-project-tags {
-    top: -5%;
+    top: -1%;
 }
 .portfolio-container .isotope-element:hover .views-field-field-project-highlight img {
     top: 100%;
@@ -280,7 +279,7 @@ header h1{
   height: 2px;
   margin: 20px auto auto;
   width: 35px;
-}
+}*/
 
 
 /*CONTACT*/
@@ -523,10 +522,55 @@ header h1{
 	font-size: 15px;
 	margin-top: 15px;
 }
-/*.about-skills li::before{
-	content: url('../img/triangle.png');
-	padding-left: 5px;
-}*/
+
+
+/* MENU HAMBURGER */
+.header-hb {
+  background-color: #202020;
+  height: 2500px;
+  left: -75%;
+  position: absolute;
+  top: 75px;
+  width: 75%;
+	z-index: 500;
+}
+.header-hb li {
+  padding: 12px;
+  text-align: center;
+}
+.header-hb .active {
+  background-color: #303030;
+}
+.header-hb li:hover{
+	background-color: #303030;
+}
+.header-hb li a {
+	color: #dddddd;
+	text-decoration: none;
+}
+.header-hb ul {
+  margin-top: 50px;
+  width: 100%;
+}
+.header-hb-nav li a{
+	padding: 12px 39%;
+}
+.header-hb .social li {
+  margin: 5px;
+}
+.header-hb .social ul {
+    margin-top: 185px;
+}
+.body-black{
+	display: none;
+	position: fixed;
+	top: 122px;
+	left: 0;
+	z-index: 450;
+	width: 100%;
+	height: 1500px;
+	background-color: rgba(0, 0, 0, 0.8);
+}
 
 
 /*FOOTER*/
@@ -555,25 +599,25 @@ footer a{
 footer a:hover{
 	text-decoration: none;
 }
-footer .social{
+.social{
 	display: block;
 	width: 100%;
 	padding-bottom: 30px;
 }
-footer .social::after{
+.social::after{
 	clear: both;
 	display: block;
 	content: "";
 }
-footer .social ul{
+.social ul{
 	text-align: center;
 }
-footer .social li{
+.social li{
 	display: inline-block;
 	text-align: center;
 	margin: 20px;
 }
-footer .facebook a{
+.facebook a{
 	display: block;
 	width: 25px;
 	height: 25px;
@@ -582,7 +626,7 @@ footer .facebook a{
 	text-indent: -5000px;
 	transition: 0.2s all;
 }
-footer .twitter a{
+.twitter a{
 	display: block;
 	width: 25px;
 	height: 25px;
@@ -591,7 +635,7 @@ footer .twitter a{
 	text-indent: -5000px;
 	transition: 0.2s all;
 }
-footer .github a{
+.github a{
 	display: block;
 	width: 25px;
 	height: 25px;
@@ -600,7 +644,7 @@ footer .github a{
 	text-indent: -5000px;
 	transition: 0.2s all;
 }
-footer .linkedin a{
+.linkedin a{
 	display: block;
 	width: 25px;
 	height: 25px;
@@ -609,16 +653,16 @@ footer .linkedin a{
 	text-indent: -5000px;
 	transition: 0.2s all;
 }
-footer .facebook a:hover{
+.facebook a:hover{
 	background-position: 0 25px;
 }
-footer .twitter a:hover{
+.twitter a:hover{
 	background-position: -25px 25px;
 }
-footer .github a:hover{
+.github a:hover{
 	background-position: -50px 25px;
 }
-footer .linkedin a:hover{
+.linkedin a:hover{
 	background-position: -75px 25px;
 }
 
@@ -702,7 +746,7 @@ footer .linkedin a:hover{
 @media screen and (max-width: 545px) {
   /* Homepage */
 	.header-logo {
-    width: 12%;
+    width: 11%;
 	}
 	.header-menu {
     width: 86%;
@@ -717,6 +761,21 @@ footer .linkedin a:hover{
 	/* Contact page */
 	#block-block-1 li {
     font-size: 13px;
+	}
+}
+@media screen and (max-width: 500px) {
+  /* Menu */
+	.header-menu{
+		display: none;
+	}
+	.header-button{
+		display: inline-block;
+	}
+	.header-button, .header-logo {
+	  vertical-align: middle;
+	}
+	.header-button {
+	  width: 87%;
 	}
 }
 @media screen and (max-width: 400px) {

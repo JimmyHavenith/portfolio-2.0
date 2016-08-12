@@ -43,36 +43,60 @@
  *
  * @ingroup themeable
  */
-?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
   "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
 <html lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>"<?php print $rdf_namespaces;?>>
-<head profile="<?php print $grddl_profile; ?>">
-	<base href="<?php global $base_url; echo $base_url; ?>" />
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <?php print $head; ?>
-  <title><?php print $head_title; ?></title>
-  <?php print $styles; ?>
-  <!-- HTML5 element support for IE6-8 -->
-  <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <head profile="<?php print $grddl_profile; ?>">
+  	<base href="<?php global $base_url; echo $base_url; ?>" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="Jimmy Havenith" />
+    <meta name="keywords" content="Jimmy, Jim, Have, Havenith, infographiste, web, webdesigner, designer, design, liège, huy" />
+    <meta name="description" content="Jimmy Havenith, infographiste belge polyvalent spécialisé dans le web" >
+    <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "Jimmy Havenith",
+      "url" : "http://www.jimmy-havenith.be",
+      "sameAs" : [
+        "https://www.facebook.com/jim.have.127",
+        "https://twitter.com/JimmyHavenith",
+        "https://github.com/JimmyHavenith"
+      ]
+    }
+    </script>
+    <?php print $head; ?>
+    <title><?php print $head_title; ?></title>
+    <?php print $styles; ?>
+    <!-- HTML5 element support for IE6-8 -->
+    <!--[if lt IE 9]>
+     <script>
+        document.createElement('header');
+        document.createElement('nav');
+        document.createElement('section');
+        document.createElement('article');
+        document.createElement('aside');
+        document.createElement('footer');
+     </script>
   <![endif]-->
-  <?php print $scripts; ?>
-</head>
-<body class="<?php print $classes; ?>" <?php print $attributes;?>>
-  <div id="skip-link">
-    <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
-  </div>
-  <?php print $page_top; ?>
-  <?php print $page; ?>
-  <?php print $page_bottom; ?>
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-75193118-1', 'auto');
-    ga('send', 'pageview');
-  </script>
-</body>
+    <?php print $scripts; ?>
+  </head>
+  <body itemscope itemtype="http://schema.org/Person" class="<?php print $classes; ?>" <?php print $attributes;?>>
+    <div id="skip-link">
+      <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
+    </div>
+    <?php print $page_top; ?>
+    <?php print $page; ?>
+    <?php print $page_bottom; ?>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-75193118-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
 </html>

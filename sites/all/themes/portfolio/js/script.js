@@ -4,7 +4,7 @@
   $(document).ready(function()
   {
 
-    //Animation filtre
+    // Animation filtre
     $('.header-button-filter').click(function()
     {
       if($('.content').hasClass('filter-not-display')){
@@ -17,7 +17,7 @@
       return false;
     });
 
-    //Positionnement titre+tag projet
+    // Positionnement titre+tag projet
 
     if($('.isotope-container li').hasClass('web')){
       $('.web.isotope-element').addClass('project-web');
@@ -39,5 +39,30 @@
       var middleHeightBlocInfoPrint = heightBlocInfoPrint - heightInfoPrint;
       $('.project-print .project-info').css('padding-top', middleHeightBlocInfoPrint);
     }
+
+    // Menu HAMBURGER
+    $('.header-button-menu').click(function(e){
+      if(parseInt($('.header-hb').css('left')) == 0){
+        e.preventDefault();
+        $('.header-hb').css('left', '-75%');
+        $('.header-hb').css('transition', 'all 0.5s');
+        $('.body-black').css('display', "none");
+      } else {
+        e.preventDefault();
+        $('.header-hb').css('left', '0');
+        $('.header-hb').css('transition', 'all 0.5s');
+        $('.body-black').css('display', "block");
+      }
+    });
+
+    $('.views-field-field-project-highlight img').each(function(){
+  		$(this).removeAttr('width')
+  		$(this).removeAttr('height');
+	  });
+
+    // Min-height body
+    // var bodyHeight = $(window).height() / 2;
+    // $('.content').css('min-height', bodyHeight);
+
   });
 })(jQuery);

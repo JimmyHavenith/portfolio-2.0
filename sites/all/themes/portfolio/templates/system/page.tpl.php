@@ -78,7 +78,7 @@ global $language;
 	<div class="container">
 		<div class="header">
 			<div class="header-logo">
-				<h1>Jimmy Havenith</h1>
+				<h1 itemprop="author">Jimmy Havenith</h1>
 				<a href="#">
 					<img src="<?php global $base_url; echo $base_url; ?>/sites/all/themes/portfolio/img/logo.png" alt="Logo de Jimmy Havenith" />
 				</a>
@@ -99,17 +99,41 @@ global $language;
 					)); ?>
 				</div>
 			<?php endif; ?>
-			<!-- <?php if(drupal_is_front_page()): ?>
-				<div class="header-button">
-					<a class="header-button-filter" href="#">filter</a>
-					<a class="header-button-menu" href="#">menu</a>
-				</div>
-			<?php endif; ?> -->
+			<div class="header-button">
+				<!-- <a class="header-button-filter" href="#">filter</a> -->
+				<a class="header-button-menu" href="#">menu</a>
+			</div>
+		</div>
+		<div class="header-hb">
+			<div class="header-hb-nav">
+				<?php print theme('links__system_main_menu', array(
+					'links' => $main_menu,
+					'attributes' => array(
+						'id' => 'main-menu-links',
+						'class' => array('links', 'clearfix'),
+					),
+					'heading' => array(
+						'text' => t('Main menu'),
+						'level' => 'h2',
+						'class' => array('element-invisible'),
+					),
+				)); ?>
+			</div>
+			<div class="social">
+				<ul>
+					<li class="facebook"><a href="https://www.facebook.com/jim.have.127" title="La page facebook de Jimmy Havenith">La page facebook de Jimmy Havenith</a></li>
+					<li class="twitter"><a href="https://twitter.com/JimmyHavenith" title="La page twitter de Jimmy Havenith">La page twitter de Jimmy Havenith</a></li>
+					<li class="github"><a href="https://github.com/JimmyHavenith" title="La page github de Jimmy Havenith">La page github de Jimmy Havenith</a></li>
+					<li class="linkedin"><a href="https://www.linkedin.com/profile/view?id=AAIAABr7Wx4BuBmr8nmX78TCQeUM63F10ggedFk&trk=nav_responsive_tab_profile_pic" title="La page linkedin de Jimmy Havenith">La page linkedin de Jimmy Havenith</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="body-black">
 		</div>
 	</div>
 </header>
 <?php if(drupal_is_front_page()): ?>
-<section class="isotope-filter">
+<!-- <section class="isotope-filter">
 	<div class="container">
 		<div class="projets-isotope item-list">
 			<ul class="isotope-options clearfix" data-filter-group="Categorie">
@@ -133,7 +157,7 @@ global $language;
 			</ul>
 		</div>
 	</div>
-</section>
+</section> -->
 <?php endif; ?>
 <section class="content <?php if(drupal_is_front_page()): ?>filter-not-display<?php endif; ?>">
 	<div class="container">
