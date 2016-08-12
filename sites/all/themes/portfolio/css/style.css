@@ -58,7 +58,7 @@ body{
 }
 section{
   width: 100%;
-	margin-top: 120px;
+	margin-top: 130px;
 }
 section::after{
 	clear: both;
@@ -67,14 +67,14 @@ section::after{
 }
 .container{
 	max-width: 1980px;
-	width: 80%;
+	width: 85%;
 	display: block;
 	margin: auto;
 }
 
 
+/* Header */
 
-/*HEADER*/
 header{
 	background-color: #dddddd;
 	height: 75px;
@@ -154,113 +154,27 @@ header h1{
 }
 
 
+/* Contenu Homepage */
 
-/*CONTENU HOMEPAGE ISOTOPE*/
-/*
-.filter-not-display{
-	margin-top: -100px;
-	transition: 0.3s;
-}
-.filter-display{
-	margin-top: 0px;
-	transition: 0.3s;
-}
-.isotope-filter {
-  height: 100px;
-  padding-top: 34px;
-  text-align: center;
-  width: 100%;
-  margin-bottom: -10px;
-}
-.isotope-filter .container{
-	border-top: 1px solid #dddddd;
-	padding-top: 15px;
-}
-.isotope-filter li {
-  display: inline-block;
-  font-size: 13px;
-  line-height: 13px;
-  list-style: outside none none;
-  text-transform: uppercase;
-}
-.item-list ul li {
-  margin: 0 0 0.25em 1.5em;
-  padding: 0;
-	margin: 25px;
-}
-.isotope-filter li a {
-  color: #1d1d1d;
-	font-family: "Montserrat", sans-serif;
-	font-size:  15px;
-	text-decoration: none;
-}
-.isotope-filter li a:hover{
-	color: #a0a0a0;
-}
-.isotope-filter .selected{
-	color: #fb923a;
-	transition: 0.2s;
-}
-.isotope-element .views-field-field-project-title, .isotope-element .views-field-view-node{
+.views-field-view-node, .views-field-field-project-title, .views-field-field-project-tags{
 	display: none;
 }
-.portfolio-container{
-	width: 100%;
-	height: auto;
-	margin: 0;
-	padding: 0;
+.views-field.views-field-field-project-highlight {
+    padding: 0 3% 6%;
 }
-.portfolio-container .isotope-element{
-	display: block;
-	width: 33.33%;
-	height: auto;
-	margin: 0;
-	padding: 0;
-	float: left;
-	margin-bottom: -7px;
-	position: relative;
-	overflow: hidden;
-	overflow-y: hidden;
-	background-color: white;
+.views-row {
+    display: inline-block;
+    width: 33%;
 }
-.isotope-element .views-field-field-project-tags{
-	background-color: white;
-	height: 100%;
-	left: 0;
-	position: absolute;
-	top: -100%;
-	width: 100%;
-	transition: 0.3s;
-	z-index: 400;
-}
-.isotope-element .views-field-field-project-highlight img{
-	width: 100%;
-	position: relative;
-	height: auto;
-	top: 0;
-	transition: 0.3s;
-}
-.portfolio-container .isotope-element:hover .views-field-field-project-tags {
-    top: -1%;
-}
-.portfolio-container .isotope-element:hover .views-field-field-project-highlight img {
-    top: 100%;
-}
-.portfolio-container .views-field{
-	margin: 0;
-	padding: 0;
-}
-.project-link a{
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 1000;
-	text-indent: -5000px;
-}
-.project-info{
-	text-align: center;
+.project-info {
+    background-color: white;
+    height: 100%;
+    position: absolute;
+    top: -100%;
+    width: 100%;
+		transition: 0.3s;
+		z-index: 250;
+		text-align: center;
 }
 .project-info h2{
 	text-transform: uppercase;
@@ -279,10 +193,43 @@ header h1{
   height: 2px;
   margin: 20px auto auto;
   width: 35px;
-}*/
+}
+.project-link {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.project-link a{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 500;
+	text-indent: -5000px;
+}
+.field-content {
+    overflow: hidden;
+    position: relative;
+}
+.field-content img {
+	position: relative;
+	top: 0;
+	width: 100%;
+	transition: 0.3s;
+	height: auto;
+}
+.field-content:hover .project-info{
+	top:-2% !important;
+}
+.views-field-field-project-highlight:hover .field-content img{
+	top: 100% !important;
+}
 
 
-/*CONTACT*/
+/* Contact */
+
 .block.block-colorized-gmap.contextual-links-region {
     margin-top: 35px;
 }
@@ -410,7 +357,8 @@ header h1{
 }
 
 
-/* PROJECT */
+/* Project */
+
 .project-banner-img{
 	width: 100%;
 	height: 250px;
@@ -483,7 +431,8 @@ header h1{
 }
 
 
-/*ABOUT*/
+/* About */
+
 .about-image{
 	width: 40%;
 	display: inline-block;
@@ -524,7 +473,8 @@ header h1{
 }
 
 
-/* MENU HAMBURGER */
+/* Menu Hamburger */
+
 .header-hb {
   background-color: #202020;
   height: 2500px;
@@ -573,13 +523,13 @@ header h1{
 }
 
 
-/*FOOTER*/
+/* Footer */
 
 footer{
 	background-color: #202020;
 	padding-bottom: 30px;
 	padding-top: 50px;
-	margin-top: 75px;
+	margin-top: 30px;
 	width: 100%;
 	height: 180px;
 }
@@ -667,12 +617,13 @@ footer a:hover{
 }
 
 
-
 /* Responsive */
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1029px) {
   /* Homepage */
-
+	.views-row {
+    width: 32%;
+	}
 }
 @media screen and (max-width: 1000px) {
   /* About page */
@@ -709,6 +660,9 @@ footer a:hover{
   /* Homepage */
 	.container {
     width: 90%;
+	}
+	.views-row {
+    width: 49%;
 	}
 	/* Project */
 	.project-description {
@@ -788,6 +742,9 @@ footer a:hover{
   /* About page */
 	.about-skills li {
 		width: 31.5%;
+	}
+	.views-row {
+    width: 100%;
 	}
 }
 @media screen and (max-width: 320px) {
