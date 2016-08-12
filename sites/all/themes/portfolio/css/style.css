@@ -79,6 +79,7 @@ header{
 	background-color: #dddddd;
 	height: 75px;
 	position: fixed;
+	top: 0;
 	width: 100%;
 	z-index: 500;
 }
@@ -225,8 +226,8 @@ header h1{
 }
 .views-field-field-project-highlight:hover .field-content img{
 	top: 100% !important;
+	-webkit-transform: translate3d(0px, 105%, 0px);
 }
-
 
 /* Contact */
 

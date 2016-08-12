@@ -10,7 +10,6 @@
     var middleHeight = heightInfoBloc - heightInfo;
     $('.project-info-div').css('padding-top', middleHeight);
 
-
     // Menu HAMBURGER
     $('.header-button-menu').click(function(e){
       if(parseInt($('.header-hb').css('left')) == 0){
