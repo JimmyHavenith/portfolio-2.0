@@ -228,6 +228,10 @@ header h1{
 	top: 100% !important;
 	-webkit-transform: translate3d(0px, 105%, 0px);
 }
+.project-info, .project-info-div{
+	vertical-align: middle;
+}
+
 
 /* Contact */
 
@@ -483,10 +487,9 @@ header h1{
   position: absolute;
   top: 75px;
   width: 75%;
-	z-index: 500;
+	z-index: 800;
 }
 .header-hb li {
-  padding: 12px;
   text-align: center;
 }
 .header-hb .active {
@@ -504,7 +507,8 @@ header h1{
   width: 100%;
 }
 .header-hb-nav li a{
-	padding: 12px 39%;
+	padding: 12px;
+	display: block;
 }
 .header-hb .social li {
   margin: 5px;
@@ -515,7 +519,7 @@ header h1{
 .body-black{
 	display: none;
 	position: fixed;
-	top: 122px;
+	top: 75px;
 	left: 0;
 	z-index: 450;
 	width: 100%;

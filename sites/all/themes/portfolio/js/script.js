@@ -17,11 +17,14 @@
         $('.header-hb').css('left', '-75%');
         $('.header-hb').css('transition', 'all 0.5s');
         $('.body-black').css('display', "none");
+        $('html').css('overflow-y', 'scroll');
       } else {
         e.preventDefault();
         $('.header-hb').css('left', '0');
         $('.header-hb').css('transition', 'all 0.5s');
         $('.body-black').css('display', "block");
+        $('.project-link a').css('z-index', '0');
+        $('html').css('overflow-y', 'hidden');
       }
     });
 

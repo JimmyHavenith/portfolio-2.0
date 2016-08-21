@@ -52,8 +52,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="Author" content="Jimmy Havenith" />
-    <meta name="keywords" content="Jimmy, Jim, Have, Havenith, infographiste, web, webdesigner, designer, design, liège, huy" />
-    <meta name="description" content="Jimmy Havenith, infographiste belge polyvalent spécialisé dans le web" >
+    <meta name="keywords" content="Jimmy, Jim, Have, Havenith, infographiste, web, webdesigner, designer, design, liège, huy, portfolio" />
+    <meta name="description" content="Jimmy Havenith, infographiste belge polyvalent spécialisé dans le web. Ceci est mon portfolio où je vous présente mes projets : sites web, web apps, illustrations et beaucoup d'autres." >
     <script type="application/ld+json">
     {
       "@context" : "http://schema.org",
