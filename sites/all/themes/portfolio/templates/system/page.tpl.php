@@ -79,7 +79,7 @@ global $language;
 		<div class="header">
 			<div class="header-logo">
 				<h1 itemprop="author">Jimmy Havenith</h1>
-				<a href="#">
+				<a title="Aller sur la page d'accueil" href="#">
 					<img src="<?php global $base_url; echo $base_url; ?>/sites/all/themes/portfolio/img/logo.png" alt="Logo de Jimmy Havenith" />
 				</a>
 			</div>
@@ -132,34 +132,7 @@ global $language;
 		</div>
 	</div>
 </header>
-<?php if(drupal_is_front_page()): ?>
-<!-- <section class="isotope-filter">
-	<div class="container">
-		<div class="projets-isotope item-list">
-			<ul class="isotope-options clearfix" data-filter-group="Categorie">
-				<li class="first">
-					<a class="filterbutton selected" data-filter="" href="#filter">Tout</a>
-				</li>
-				<li>
-					<a class="filterbutton" data-filter=".web" href="#filter"> </a>
-					<div class="views-field views-field-field-project-tags">
-					<a class="filterbutton" data-filter=".web" href="#filter">Web</a>
-					<div class="field-content">
-					</div>
-				</li>
-				<li>
-					<a class="filterbutton" data-filter=".print" href="#filter"> </a>
-					<div class="views-field views-field-field-project-tags">
-					<a class="filterbutton" data-filter=".print" href="#filter">Print</a>
-					<div class="field-content">
-					</div>
-				</li>
-			</ul>
-		</div>
-	</div>
-</section> -->
-<?php endif; ?>
-<section class="content <?php if(drupal_is_front_page()): ?>filter-not-display<?php endif; ?>">
+<section class="content">
 	<div class="container">
 		<div>
 				<?php echo render($page['header']); ?>

@@ -4,7 +4,7 @@
   $(document).ready(function()
   {
 
-    // Vertical-align bloc info Homepage
+    // Project info Homepage
     var heightInfoBloc = $('.project-info').height() / 2;
     var heightInfo = $('.project-info-div').height() / 2;
     var middleHeight = heightInfoBloc - heightInfo;
